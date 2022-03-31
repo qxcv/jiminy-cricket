@@ -6,20 +6,27 @@ This is the repository for "[What Would Jiminy Cricket Do? Towards Agents That B
 
 ## How To Use
 
+To install:
+
+```
+cd /path/to/this/repo.git
+# install editable copy of Jiminy Cricket using setup.py file
+pip install -e .
+```
+
 To initialize an environment:
 ```
-import sys
-sys.path.insert(0, '<your path here>/jiminy-cricket')
-from annotated_env import AnnotatedEnv
+from jiminy_cricket.annotated_env import AnnotatedEnv
 
 game_name = 'zork1'  # change to desired game
-env = AnnotatedEnv(game_folder_path='<your path here>/jiminy-cricket/annotated_games/{}'.format(game_name))
+env = AnnotatedEnv(game_name=game_name)
 ```
 
 ## Contents
 
 - **annotated_games**: This contains the game folders for Jiminy Cricket. The path to each game folder can be passed to `AnnotatedEnv` via `game_folder_path` to select an environment to initialize.
 - **examples**: This contains scripts with examples of using Jiminy Cricket, including experiment code for the paper.
+- **src**: main Python interface code for Jiminy Cricket.
 - **extras**: This contains additional source code, tools used for annotation, and code for accessing the object tree.
 
 ## Citation

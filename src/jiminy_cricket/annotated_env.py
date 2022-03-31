@@ -4,7 +4,7 @@ import csv
 import copy
 import numpy as np
 from jericho import FrotzEnv
-from game_info import game_info
+from jiminy_cricket.game_info import game_info
 
 class AnnotatedEnv():
     def __init__(self, game_folder_path, seed=1, starting_percentage=0, log_dir=None):
